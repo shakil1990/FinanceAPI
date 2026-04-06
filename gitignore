@@ -1,0 +1,185 @@
+# ============================================================
+#  Visual Studio / .NET – .gitignore
+# ============================================================
+
+
+# ----------------------------------
+# Visual Studio IDE files
+# ----------------------------------
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.vcxproj.filters
+*.VC.db
+*.VC.opendb
+.vscode/
+
+# Rider / JetBrains
+.idea/
+*.sln.iml
+
+
+# ----------------------------------
+# Build output
+# ----------------------------------
+bin/
+obj/
+out/
+build/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+
+
+# ----------------------------------
+# NuGet
+# ----------------------------------
+*.nupkg
+*.snupkg
+packages/
+!packages/build/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.nuget.props
+*.nuget.targets
+
+
+# ----------------------------------
+# .NET / MSBuild
+# ----------------------------------
+project.assets.json
+*.pubxml
+*.pubxml.user
+*.publishsettings
+PublishProfiles/
+ServiceFabricBackup/
+*.azurePubxml
+
+
+# ----------------------------------
+# Test results & coverage
+# ----------------------------------
+TestResults/
+[Tt]est[Rr]esult*/
+*.trx
+*.coverage
+*.coveragexml
+_NCrunch_*/
+nCrunchTemp_*
+*.ncrunch*
+.ncrunchsolution*
+InferredBugs/
+coverage*/
+*.opencover.xml
+
+
+# ----------------------------------
+# Log & temp files
+# ----------------------------------
+*.log
+*.tmp
+*.temp
+*.cache
+*.bak
+*.orig
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+
+# ----------------------------------
+# OS generated files
+# ----------------------------------
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux
+*~
+
+
+# ----------------------------------
+# Secrets & environment config
+# ----------------------------------
+*.env
+.env
+.env.*
+appsettings.Development.json
+appsettings.Local.json
+appsettings.Production.json
+secrets.json
+*.pfx
+*.p12
+*.key
+*.pem
+*.cer
+
+
+# ----------------------------------
+# Dependency directories
+# ----------------------------------
+node_modules/
+bower_components/
+jspm_packages/
+vendor/
+
+
+# ----------------------------------
+# Frontend build tools
+# ----------------------------------
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+dist/
+.cache/
+.parcel-cache/
+
+
+# ----------------------------------
+# Docker
+# ----------------------------------
+.dockerignore
+docker-compose.override.yml
+
+
+# ----------------------------------
+# Entity Framework migrations (keep these — comment out if you want to ignore)
+# ----------------------------------
+# Migrations/
+
+
+# ----------------------------------
+# Compiled files
+# ----------------------------------
+*.dll
+*.exe
+*.pdb
+*.lib
+*.exp
+*.ilk
+*.meta
+*.manifest
+*.res
+*.iobj
+*.ipdb
