@@ -102,8 +102,17 @@ export default function ExpenseSummaryPage() {
                     ) : (
                       <ul className="expense-table__detail-list">
                         {row.expenses.map((e) => (
-                          <li key={e.id}>
-                            {money.format(e.amount)} — {e.description}
+                          <li key={e.id} className="expense-table__detail-row">
+                            <span className="expense-table__detail-text">
+                              {money.format(e.amount)} — {e.description}
+                            </span>
+                            <Link
+                              className="expense-table__detail-edit"
+                              to={`/expenses/edit/${encodeURIComponent(e.id)}`}
+                              aria-label={`Edit expense: ${e.description} on ${row.date}`}
+                            >
+                              Edit
+                            </Link>
                           </li>
                         ))}
                       </ul>

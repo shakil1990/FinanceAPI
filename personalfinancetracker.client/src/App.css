@@ -177,6 +177,31 @@
   margin: 0.2rem 0;
 }
 
+.expense-table__detail-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.35rem 0.75rem;
+}
+
+.expense-table__detail-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.expense-table__detail-edit {
+  flex-shrink: 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.expense-table__detail-edit:hover {
+  text-decoration: underline;
+}
+
 .expense-form {
   max-width: 26rem;
   display: flex;

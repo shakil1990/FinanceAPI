@@ -2,6 +2,7 @@ import { Link, Navigate, Route, Routes } from 'react-router-dom';
 import { ExpenseProvider } from '@/context/ExpenseContext.jsx';
 import ExpenseSummaryPage from '@/pages/ExpenseSummaryPage.jsx';
 import AddExpensePage from '@/pages/AddExpensePage.jsx';
+import EditExpensePage from '@/pages/EditExpensePage.jsx';
 import './App.css';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
             <Route path="/" element={<Navigate to="/expenses" replace />} />
             <Route path="/expenses" element={<ExpenseSummaryPage />} />
             <Route path="/expenses/add" element={<AddExpensePage />} />
+            <Route path="/expenses/edit/:id" element={<EditExpensePage />} />
             <Route path="*" element={<Navigate to="/expenses" replace />} />
           </Routes>
         </main>

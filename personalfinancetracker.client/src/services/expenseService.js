@@ -49,6 +49,50 @@ export function addExpense(expenses, input) {
 }
 
 /**
+ * @param {Expense} existing
+ * @param {ExpenseInput} input
+ * @returns {Expense}
+ */
+function mergeExpenseFromInput(existing, input) {
+  return {
+    ...existing,
+    date: input.date,
+    amount: Number(input.amount),
+    description: input.description.trim(),
+  };
+}
+
+/**
+ * @param {Expense[]} expenses
+ * @param {string} id
+ * @param {ExpenseInput} input
+ * @returns {{ list: Expense[], updated: Expense } | null} null if id not found
+ */
+export function updateExpense(expenses, id, input) {
+  const idx = expenses.findIndex((e) => e.id === id);
+  if (idx === -1) return null;
+  const existing = expenses[idx];
+  const updated = mergeExpenseFromInput(existing, input);
+  const list = [
+    ...expenses.slice(0, idx),
+    updated,
+    ...expenses.slice(idx + 1),
+  ];
+  return { list, updated };
+}
+
+/**
+ * @param {Expense[]} expenses
+ * @param {string} id
+ * @returns {Expense[] | null} null if no expense matched id
+ */
+export function deleteExpense(expenses, id) {
+  const next = expenses.filter((e) => e.id !== id);
+  if (next.length === expenses.length) return null;
+  return next;
+}
+
+/**
  * @param {Expense[]} expenses
  * @param {string} startIso
  * @param {string} endIso

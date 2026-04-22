@@ -10,6 +10,8 @@ import { createContext } from 'react';
  * @typedef {Object} ExpenseContextValue
  * @property {Expense[]} expenses
  * @property {(input: ExpenseInput) => Expense} addExpense
+ * @property {(id: string, input: ExpenseInput) => boolean} updateExpense
+ * @property {(id: string) => boolean} deleteExpense
  * @property {(startIso: string, endIso: string) => Expense[]} getExpensesInRange
  * @property {(startIso: string, endIso: string) => DailyTotalRow[]} getDailyTotals
  */
